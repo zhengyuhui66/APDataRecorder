@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+        <!-- spark应用名称  -->
+        <appName>DDCOverSpeed</appName>
+        <!-- 每隔多少时间从kafka获取数据，单位秒 -->
+        <duration>10</duration>
+        <!-- kafka集群地址  -->
+        <brokers>10.10.10.23:9092</brokers>
+        <!-- kafka消费团体  -->
+        <group>g2016apgroup</group>
+        <!-- kafka订阅主题  -->
+        <topic>G2016APTopic</topic>
+        <!-- kafka消费偏移量方式  -->
+        <offset>latest</offset>
+        <!-- 设备间距离表 -->
+        <recoderTable>APRecoder</recoderTable>
+
+        <recoderDateInxTable>APRecoder_dateInx</recoderDateInxTable>
+
+        <recoderMacInxTable>APRecoder_apmacInx</recoderMacInxTable>
+
+        <recoderDuplicate>MTAPInfo</recoderDuplicate>
+
+        <recoderDevDuplicate>MTAPDevInfo</recoderDevDuplicate>
+
+        <recoderSSIDDuplicate>MTSSIDAPInfo</recoderSSIDDuplicate>
+        <recoderAPDuplicate>MTAPSSIDInfo</recoderAPDuplicate>
+        <!-- redis host -->
+        <redisHost>10.10.10.23</redisHost>
+        <!-- redis port -->
+        <redisPort>6379</redisPort>
+        <!-- redis timeout -->
+        <redisTimeout>2000</redisTimeout>
+        <!-- kafka redis key -->
+        <kafkaOffsetKey>kafkaOffset_APRecoder</kafkaOffsetKey>
+</config>
